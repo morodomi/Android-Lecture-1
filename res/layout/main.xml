@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+	<!-- 計算式の演算記号の上側の入力 -->
+
+	<EditText
+		android:id="@+id/edit_text_1"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:inputType="number"
+		android:singleLine="true" />
+	<!-- 演算記号 -->
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:text="@string/operation" />
+	<!-- 計算式の演算記号の下側の入力 -->
+
+	<EditText
+		android:id="@+id/edit_text_2"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:inputType="number"
+		android:singleLine="true" />
+	<!-- イコール -->
+
+	<Button
+		android:id="@+id/equal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:text="@string/equal" />
+	<!-- 答え -->
+
+	<TextView
+		android:id="@+id/answer"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:text="@string/answer" />
+
+</LinearLayout>
