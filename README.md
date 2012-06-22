@@ -13,9 +13,9 @@ In this Lecture, you will learn how to get/set values from/to the view in this a
  * Android 2.1 or higher
 
 ##Questions
- * Change add symbol to subscription symbol.
+ * Change add symbol to subscription symbol in the app view.
  * Change the answer too.
- * Logging the answer before it comes out.
+ * Logging the answer before it comes out using adb logcat.
  * If there is no input, the app crashes. So please fix it with checking input before calculate or use try - catch clause.
  * Change possible numbers from decimal to floating point numbers.
  * Prepare 4 symbols, +, -, *, and / Buttons, then calculate when one of them is clicked.
