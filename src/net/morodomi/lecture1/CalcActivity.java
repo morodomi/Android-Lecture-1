@@ -8,45 +8,48 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * Activity for Android Lecture 1
+ * This controls the input of EditText and Event when the button is clicked.
+ * @author Masahiro Morodomi <morodomi at gmail.com>
+ */
 public class CalcActivity extends Activity implements OnClickListener {
-	/**
-	 * Activityが生成された時、 まず初めにAndroid Frameworkにから呼び出されます。
-	 */
+	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		// 親のクラスのメソッドを呼び、必要な処理をします。
+		// call super method of parent class to process anything needed.
 		super.onCreate(savedInstanceState);
-		// メインのViewを設定します。
+		// set main view XML.
 		setContentView(R.layout.main);
-		// ボタンインスタンスを作成します。
+		// create button instance in this program.
 		Button equal = (Button) findViewById(R.id.equal);
-		// ボタンインスタンスに対して、クリックされた時のイベントを設定します。
+		// set click event of button instance.
 		equal.setOnClickListener(this);
 	}
 
-	// ボタンがクリックされると、このメソッドが呼び出されます。
+	/* Called when any instance of this activity which set OnClickListener is click */
 	@Override
 	public void onClick(View v) {
-		// EditTextのインスタンスを作成します。
+		// create EditText instance.
 		EditText editText1 = (EditText) findViewById(R.id.edit_text_1);
-		// インスタンスから文字列を抜き出します。
+		// get string from EditText instance
 		String string1 = editText1.getEditableText().toString();
-		// String型をInteger型へ変換します。
+		// Convert from String type to Integer
 		int number1 = Integer.parseInt(string1);
 		
-		// こんなふうにも書けます。
+		// You can also write those three line as below.
 		int number2 = Integer.parseInt(
 				((EditText) findViewById(R.id.edit_text_2))
 				.getEditableText()
 				.toString()
 		);
 
-		// この2つの数字を計算します。
+		// Calculate 2 numbers.
 		int answer = number1 + number2;
 
-		// 計算結果を表示するViewを取得します。
+		// Get the view which show the answer.
 		TextView textView = (TextView) findViewById(R.id.answer);
-		// Viewに結果を書き出します。
+		// Set the answer to the view.
 		textView.setText(String.valueOf(answer));
 	}
 }
