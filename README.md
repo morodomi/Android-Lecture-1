@@ -21,7 +21,7 @@ In this Lecture, you will learn how to get/set values from/to the view in this a
  * Prepare 4 symbols, +, -, *, and / Buttons, then calculate when one of them is clicked.
 
 ## Presentation Slides (Japanese only)
-http://dl.dropbox.com/u/54119179/Android/android-lecture-1.html#/step-1
+http://dl.dropbox.com/u/54119179/Android/android-lecture-1.html
 
 ##License
     Copyright (c) on 2012, Masahiro Morodomi
