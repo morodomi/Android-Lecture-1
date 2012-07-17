@@ -2,6 +2,7 @@ package net.morodomi.lecture1;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -35,21 +36,26 @@ public class CalcActivity extends Activity implements OnClickListener {
 		// get string from EditText instance
 		String string1 = editText1.getEditableText().toString();
 		// Convert from String type to Integer
-		int number1 = Integer.parseInt(string1);
-		
-		// You can also write those three line as below.
-		int number2 = Integer.parseInt(
-				((EditText) findViewById(R.id.edit_text_2))
-				.getEditableText()
-				.toString()
-		);
+		int number1;
+		int number2;
+		try {
+			number1 = Integer.parseInt(string1);
+			// You can also write those three line as below.
+			number2 = Integer.parseInt(
+					((EditText) findViewById(R.id.edit_text_2))
+					.getEditableText()
+					.toString()
+			);
+			// Calculate 2 numbers.
+			int answer = number1 + number2;
 
-		// Calculate 2 numbers.
-		int answer = number1 + number2;
-
-		// Get the view which show the answer.
-		TextView textView = (TextView) findViewById(R.id.answer);
-		// Set the answer to the view.
-		textView.setText(String.valueOf(answer));
+			// Get the view which show the answer.
+			TextView textView = (TextView) findViewById(R.id.answer);
+			Log.d("Morodomi", String.valueOf(answer));
+			// Set the answer to the view.
+			textView.setText(String.valueOf(answer));
+		} catch(NumberFormatException e) {
+			showDialog(1);
+		}
 	}
 }

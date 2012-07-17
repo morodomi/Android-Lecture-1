@@ -3,7 +3,7 @@
 
 	<string name="hello">Hello World, CalcActivity!</string>
 	<string name="app_name">Calculator</string>
-	<string name="operation">+</string>
+	<string name="operation">-</string>
 	<string name="equal">=</string>
 	<string name="answer">Answer</string>
 </resources>
